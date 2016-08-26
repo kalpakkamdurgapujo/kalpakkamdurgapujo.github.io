@@ -38,3 +38,12 @@ img {
 	display: block;
 	margin: auto;
 }
+.float-right img{
+	float: right;
+	padding: 5px;
+}
+.float-left img {
+	float: left;
+	padding: 5px;
+	margin-right: 10px;
+}
