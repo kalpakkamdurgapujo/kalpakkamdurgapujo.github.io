@@ -3,11 +3,11 @@
 	<head>
 		<meta charset = "UTF-8">
 		<title>Kalpakkam Durga Pujo 2016</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 		<script type="text/javascript" src="./assets/js/jquery-1.11.3.min.js"></script>
     	<script type="text/javascript" src="./assets/js/jssor.slider-21.1.5.mini.js"></script>
     	<link rel="stylesheet" type="text/css" href="./assets/css/slider.css">
-		<!--Script for the image slideshow!-->
 		<script>
         jQuery(document).ready(function ($) {
             
@@ -44,9 +44,6 @@
             };
             
             var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-            
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizing
             function ScaleSlider() {
                 var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
                 if (refSize) {
@@ -61,22 +58,24 @@
             $(window).bind("load", ScaleSlider);
             $(window).bind("resize", ScaleSlider);
             $(window).bind("orientationchange", ScaleSlider);
-            //responsive code end
         });
     </script>
 	</head>
 	<body>
+		<nav class="navbar navbar-dark bg-primary navbar-fixed-top">
+  			<div class="nav navbar-nav" id="topbanner">
+				<button class="btn btn-warning active"><a style="color: #000000; text-decoration: none" href="#">HOME</a></button>
+				<button class="btn btn-warning"><a style="color: #000000; text-decoration: none" href="about_kalpakkam.html">ABOUT US</a></button>
+				<button class="btn btn-warning"><a style="color: #000000; text-decoration: none" >COMMITEE MEMBER</a></button>
+				<button class="btn btn-warning"><a style="color: #000000; text-decoration: none" >PUJA NIRGHANTA</a></button>
+				<button class="btn btn-warning"><a style="color: #000000; text-decoration: none" >CULTURAL PROGRAMME</a></button>
+				<button class="btn btn-warning"><a style="color: #000000; text-decoration: none" >HONOURABLE SPONSORS</a></button>
+				<button class="btn btn-warning"><a style="color: #000000; text-decoration: none" >DUTY SCHEDULE</a></button>
+				<button class="btn btn-warning"><a style="color: #000000; text-decoration: none" >BCA CORNER</a></button>
+  			</div>
+		</nav>
+		<br>
 		<h1>Kalpakkam Durga Pujo 2016</h1>
-		<ul id="menu">
-			<li><a href="#">HOME</a></li>
-			<li><a href="about_kalpakkam.html">ABOUT US</a></li>
-			<li><a>COMMITEE MEMBER</a></li>
-			<li><a>PUJA NIRGHANTA</a></li>
-			<li><a>CULTURAL PROGRAMME</a></li>
-			<li><a>HONOURABLE SPONSORS</a></li>
-			<li><a>DUTY SCHEDULE</a></li>
-			<li><a>BCA CORNER</a></li>
-		</ul>
 		<p>Welcome to the official website of the Durga Pujo celebrations at Kalpakkam<p>
 		<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 450px; overflow: hidden; visibility: hidden;">
 	        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -123,6 +122,5 @@
 	        <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
 	    </div>
 	    <br><br><br><br>
-		<img src="./assets/images/coverflow.jpg" alt="Idol 2014"/>
 	</body>
 </html>
