@@ -1,12 +1,12 @@
 body {
 	background-image: url(../images/coverimage.jpg);
-	color: #FF6F00;
+	color: #271033;
 	font-size: 20px;
 	padding: 10px;
 }
-h1, h2 {
+h1, h2, h3 {
 	text-align: center;
-	color: #FF6F00;
+	color: #271033;
 }
 img {
 	border: 3px solid #000000;
@@ -34,4 +34,17 @@ button {
 	margin: 5px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+#map {
+        width: 50%;
+        height: 400px;
+        background-color: grey;
+        margin: 0 auto;
+        padding: 10px;
+      }
+#sameline {
+	display: inline-block;
+}
+span {
+	display: inline-block;
 }
