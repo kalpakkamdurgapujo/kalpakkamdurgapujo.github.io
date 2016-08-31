@@ -186,11 +186,7 @@
                             <div class="modal-body">
                                 <h2>Venue</h2>
                                 <hr>
-                                <div id="map" style="width: 50%;
-        height: 400px;
-        background-color: grey;
-        margin: 0 auto;
-        padding: 10px;"></div>
+                                <div id="map"></div>
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
                         </div>
@@ -242,20 +238,79 @@
                 </div>
             </div>
         </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h3>Mahalaya Sound Track</h3>
+                                <hr>
+                                  <img src="./assets/images/mahalaya1.jpg">
+                                  <audio controls>
+                                    <source src="./assets/audio/mahalaya.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                    <br>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script>
-          function initMap() {
-            var mapDiv = document.getElementById('map');
-            var map = new google.maps.Map(mapDiv, {
-                center: {lat: 12.505720, lng: 80.158653},
-                zoom: 17,
-                mapTypeId: google.maps.MapTypeId.TERRAIN
-            });
-            var marker = new google.maps.Marker({
-                position: {lat: 12.505720, lng: 80.158653},
-                map: map,
-                title: 'Durga Pujo celebrations Kalpakkam'
-            });
-          }
+          var map;        
+            var myCenter=new google.maps.LatLng(53, -1.33);
+var marker=new google.maps.Marker({
+    position:myCenter
+});
+
+function initialize() {
+  var mapProp = {
+      center:myCenter,
+      zoom: 14,
+      draggable: false,
+      scrollwheel: false,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  
+  map=new google.maps.Map(document.getElementById("map"),mapProp);
+  marker.setMap(map);
+    
+  google.maps.event.addListener(marker, 'click', function() {
+      
+    infowindow.setContent(contentString);
+    infowindow.open(map, marker);
+    
+  }); 
+};
+google.maps.event.addDomListener(window, 'load', initialize);
+
+google.maps.event.addDomListener(window, "resize", resizingMap());
+
+$('#portfolioModal1').on('show.bs.modal', function() {
+   //Must wait until the render of the modal appear, thats why we use the resizeMap and NOT resizingMap!! ;-)
+   resizeMap();
+})
+
+function resizeMap() {
+   if(typeof map =="undefined") return;
+   setTimeout( function(){resizingMap();} , 400);
+}
+
+function resizingMap() {
+   if(typeof map =="undefined") return;
+   var center = map.getCenter();
+   google.maps.event.trigger(map, "resize");
+   map.setCenter(center); 
+}
         </script>
         <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCigQePLX3CZFLfIgtLbSVGvkSX1raW7ps&callback=initMap">
