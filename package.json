@@ -1,0 +1,23 @@
+{
+  "name": "kalpakkamdurgapujo.github.io",
+  "version": "1.0.1",
+  "description": "Website for Kalpakkam Durga Pujo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalpakkamdurgapujo/kalpakkamdurgapujo.github.io.git"
+  },
+  "author": "Anubhab Sen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kalpakkamdurgapujo/kalpakkamdurgapujo.github.io/issues"
+  },
+  "homepage": "https://github.com/kalpakkamdurgapujo/kalpakkamdurgapujo.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-image-resize": "^0.10.0"
+  }
+}

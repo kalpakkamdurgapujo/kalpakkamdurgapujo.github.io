@@ -163,7 +163,7 @@
                     	<a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                         	<div class="caption">
                             	<div class="caption-content">
-                                	<i class="fa fa-play-circle fa-3x"></i>
+                                	<i id="audiodiv" class="fa fa-play-circle fa-3x"></i>
                             	</div>
                         	</div>
                         	<img src="./assets/images/mahalaya.jpg" class="img-responsive" alt="">
@@ -253,7 +253,7 @@
                                 <h3>Mahalaya Sound Track</h3>
                                 <hr>
                                   <img src="./assets/images/mahalaya1.jpg">
-                                  <audio controls>
+                                  <audio id="myAudio" controls>
                                     <source src="./assets/audio/mahalaya.mp3" type="audio/mpeg">
                                         Your browser does not support the audio element.
                                     </audio>
@@ -265,6 +265,21 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+          document.getElementById('myAudio').onclick = function(){
+            console.log("Hi");
+          }
+          function switchIcon() {
+            // var myAudio = document.getElementById('myAudioID');
+            // if (myAudio.duration > 0 && !myAudio.paused) {
+              // document.getElementById("audiodiv").className = "fa fa-stop-circle-o fa-3x";
+            // }else{
+              // document.getElementById("audiodiv").className = "fa fa-play-circle fa-3x";
+              // alert("Paused");
+              console.log("Triggered");
+            
+          }
+        </script>
         <script>
           var map;        
             var myCenter=new google.maps.LatLng(53, -1.33);
