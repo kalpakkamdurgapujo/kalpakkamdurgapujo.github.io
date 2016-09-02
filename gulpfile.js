@@ -18,6 +18,10 @@ sourceImage300 = ['./assets/images/venue.png',
 					'./assets/images/mahalaya.jpg'
 ]
 
+sourceImage780 = ['./assets/images/kalpakkam1.jpg',
+					'./assets/images/kalpakkam2.jpg'
+]
+
 gulp.task('default', function () {
   gulp.src(sourceImage600)
     .pipe(imageResize({
@@ -47,6 +51,17 @@ gulp.task('resizeport', function() {
 			crop : false,
 			upscale : false,
 			qualilty : 0
+		}))
+		.pipe(gulp.dest('./assets/images/newresized'))
+})
+
+gulp.task('resize780', function() {
+	gulp.src(sourceImage780)
+		.pipe(imageResize({
+			width : 400,
+			crop : false,
+			upscale : false,
+			quality : 5
 		}))
 		.pipe(gulp.dest('./assets/images/newresized'))
 })
