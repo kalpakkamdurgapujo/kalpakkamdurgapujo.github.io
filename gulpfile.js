@@ -19,7 +19,10 @@ sourceImage300 = ['./assets/images/venue.png',
 ]
 
 sourceImage780 = ['./assets/images/kalpakkam1.jpg',
-					'./assets/images/kalpakkam2.jpg'
+					'./assets/images/kalpakkam2.jpg',
+					'./assets/images/impossible.png',
+					'./assets/images/face2.jpg',
+					'./assets/images/face1.jpg'
 ]
 
 gulp.task('default', function () {
@@ -61,7 +64,7 @@ gulp.task('resize780', function() {
 			width : 400,
 			crop : false,
 			upscale : false,
-			quality : 5
+			quality : 0
 		}))
 		.pipe(gulp.dest('./assets/images/newresized'))
 })
