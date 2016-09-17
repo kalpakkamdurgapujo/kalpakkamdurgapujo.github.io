@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Simple HTML Photo Gallery with JavaScript</title>
+<meta charset = "UTF-8">
+		<title>About Durga Pujo</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style type="text/css">
+body {
+	background-image: url(./assets/images/coverimage.jpg);
+	color: #eee;
+	margin-top: 20px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+a {
+	color: #FFF;
+}
+a:hover {
+	color: yellow;
+	text-decoration: underline;
+}
+.thumbnails img {
+	height: 80px;
+	border: 4px solid #555;
+	padding: 1px;
+	margin: 0 10px 10px 0;
+}
+
+.thumbnails img:hover {
+	border: 4px solid #00ccff;
+	cursor:pointer;
+}
+
+.preview img {
+	border: 4px solid #444;
+	padding: 1px;
+	width: 800px;
+}
+</style>
+
+</head>
+<body>
+<nav class="navbar navbar-dark navbar-fixed-top" style="background-color: #388697; text-align: center;">
+  			<div class="nav navbar-nav" id="topbanner" style="margin-left: 16.7%; text-align:left;">
+				<a class="btn" style="margin-right: 3px; margin-left: 3px; background-color: #FFFD77; color: #000000; text-decoration: none" href="index.html">HOME</a>
+				<span class="dropdown">
+					<a class="btn btn-active dropdown-toggle" type="button" data-toggle="dropdown" style="margin-right: 3px; margin-left: 3px; background-color: #FFFD77; color: #000000;">ABOUT US
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" style="background-color: #FFFD77; color: #000000;">
+						<li><a href="about_kalpakkam.html">About Kalpakkam</a></li>
+					    <li><a href="about_durga.html">About Durga Pujo</a></li>
+					</ul>
+				</span>
+				<a class="btn" style="margin-right: 3px; margin-left: 3px; background-color: #FFFD77; color: #000000; text-decoration: none" href="committee_members.html" >COMMITEE MEMBERS</a>
+				<a class="btn" style="margin-right: 3px; margin-left: 3px; background-color: #FFFD77; color: #000000; text-decoration: none" href="puja_nirghanta.html">PUJA NIRGHANTA</a>
+				<a class="btn" style="margin-right: 3px; margin-left: 3px; background-color: #FFFD77; color: #000000; text-decoration: none" >CULTURAL PROGRAMME</a>
+				<a class="btn" style="margin-right: 3px; margin-left: 3px; background-color: #FFFD77; color: #000000; text-decoration: none" >OUR SPONSORS</a>
+  			</div>
+		</nav>
+		<br><br>
+		<h1 class="text-primary">Gallery</h1>
+<div class="gallery" align="center">
+	<br>
+	<br>
+	<div class="thumbnails">
+		<img onmouseover="preview.src=img1.src" name="img1" src="images/img1.jpg" alt=""/>
+		<img onmouseover="preview.src=img2.src" name="img2" src="images/img2.jpg" alt=""/>
+		<img onmouseover="preview.src=img3.src" name="img3" src="images/img3.jpg" alt=""/>
+		<img onmouseover="preview.src=img4.src" name="img4" src="images/img4.jpg" alt=""/>
+		<img onmouseover="preview.src=img5.src" name="img5" src="images/img5.jpg" alt=""/>
+		<img onmouseover="preview.src=img6.src" name="img6" src="images/img6.jpg" alt=""/>
+		<img onmouseover="preview.src=img7.src" name="img7" src="images/img7.jpg" alt=""/>
+	</div><br/>
+
+	<div class="preview" align="center">
+		<img name="preview" src="images/img1.jpg" alt=""/>
+	</div>
+</div>
+</body>
+</html>
