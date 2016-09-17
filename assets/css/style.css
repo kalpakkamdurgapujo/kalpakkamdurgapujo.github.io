@@ -9,7 +9,7 @@ h1, h2, h3 {
 	text-align: center;
 	color: #271033;
 }
-img {
+.normal {
 	border: 3px solid #000000;
 	border-radius: 4px;
 	padding: 10px;
@@ -51,4 +51,20 @@ span {
 }
 table {
 	margin: 20px;
+}
+.gallerycover {
+	max-width: 83%;
+	border: 3px solid #000000;
+	border-radius: 4px;
+	height: auto;
+	display: inline-block;
+	margin: auto;
+	padding: 5px;
+}
+span {
+    white-space: nowrap;
+}
+.galleythumbs {
+	width: 35%;
+	margin: 2%;
 }
