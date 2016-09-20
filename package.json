@@ -18,6 +18,12 @@
   "homepage": "https://github.com/kalpakkamdurgapujo/kalpakkamdurgapujo.github.io#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-image-resize": "^0.10.0"
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-image-resize": "^0.10.0",
+    "gulp-uglify": "^2.0.0",
+    "pump": "^1.0.1"
+  },
+  "dependencies": {
+    "gulp-uglifycss": "^1.0.6"
   }
 }

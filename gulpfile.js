@@ -1,5 +1,9 @@
 var gulp = require('gulp');
 var imageResize = require('gulp-image-resize');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
+var uglifycss = require('gulp-uglifycss');
+var htmlmin = require('gulp-htmlmin');
 
 sourceImage600 = ['./assets/images/coverflow.jpg',
 					'./assets/images/durga2.jpg',
@@ -24,6 +28,31 @@ sourceImage780 = ['./assets/images/kalpakkam1.jpg',
 					'./assets/images/face2.jpg',
 					'./assets/images/face1.jpg'
 ]
+
+gulp.task('minify', function() {
+  return gulp.src('./*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('tempHTML'))
+});
+
+gulp.task('compresscss', function () {
+  gulp.src(['./assets/css/style.css', './assets/css/slider.css'])
+    .pipe(uglifycss({
+      "maxLineLen": 1000,
+      "uglyComments": false
+    }))
+    .pipe(gulp.dest('./assets/css/new'));
+});
+
+gulp.task('compressjs', function (cb) {
+  pump([
+        gulp.src('./assets/js/scripts.js'),
+        uglify(),
+        gulp.dest('./assets/js/new')
+    ],
+    cb
+  );
+});
 
 gulp.task('default', function () {
   gulp.src(sourceImage600)
