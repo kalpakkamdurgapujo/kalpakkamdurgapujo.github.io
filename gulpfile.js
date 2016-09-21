@@ -36,7 +36,7 @@ gulp.task('minify', function() {
 });
 
 gulp.task('compresscss', function () {
-  gulp.src(['./assets/css/style.css', './assets/css/slider.css'])
+  gulp.src(['./assets/css/style.css', './assets/css/slider.css', './assets/css/flipclock.css'])
     .pipe(uglifycss({
       "maxLineLen": 1000,
       "uglyComments": false
@@ -46,7 +46,7 @@ gulp.task('compresscss', function () {
 
 gulp.task('compressjs', function (cb) {
   pump([
-        gulp.src('./assets/js/scripts.js'),
+        gulp.src('./assets/js/flipclock.js'),
         uglify(),
         gulp.dest('./assets/js/new')
     ],
