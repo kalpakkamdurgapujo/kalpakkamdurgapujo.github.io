@@ -30,9 +30,9 @@ sourceImage780 = ['./assets/images/kalpakkam1.jpg',
 ]
 
 gulp.task('minify', function() {
-  return gulp.src('./*.html')
+  return gulp.src('./html.bak/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('tempHTML'))
+    .pipe(gulp.dest('.'))
 });
 
 gulp.task('compresscss', function () {
