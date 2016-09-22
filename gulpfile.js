@@ -46,7 +46,7 @@ gulp.task('compresscss', function () {
 
 gulp.task('compressjs', function (cb) {
   pump([
-        gulp.src('./assets/js/flipclock.js'),
+        gulp.src('./assets/js/scripts.js'),
         uglify(),
         gulp.dest('./assets/js/new')
     ],
